@@ -1,0 +1,24 @@
+.table td{
+	text-align: center;
+}
+
+.panel{
+	margin: auto;
+	max-width: 500px;
+}
+
+.panel-heading{
+	background-color: #000;
+}
+
+.container{
+	margin: auto;
+}
+
+span#erros{
+	color: red;
+}
+
+.btn{
+	font-weight: bolder;
+}

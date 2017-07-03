@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">	
+	<meta charset="utf-8"/>
+	<title></title>
+</head>
+<body onload="document.getElementById('erros').innerHTML = ''; ">
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand" id="navTitle"></a>				
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid">
+		<table class="table table-responsive" id="tabela">
+			
+		</table>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<span id="erros" style="color: red"></span>	
+			<div class="panel panel-success">
+				<div class="panel-heading panel-success">Cadastre um Produto</div>
+				<div class="panel-body">				
+					<form class="form-horizontal">
+						<div class="form-group">
+							<label for="produto" class="col-sm-3 control-label">Produto</label>
+							<div class="col-sm-8">
+								<input type="text" name="produto" id="produto" class="form-control" placeholder="descricao" >
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="quantidade" class="col-sm-3 control-label">Quantidade</label>
+							<div class="col-sm-8">
+								<input type="text" name="quantidade" id="quantidade" class="form-control" placeholder="quantidade de produtos">
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="valor" class="col-sm-3 control-label">Valor</label>
+							<div class="col-sm-8">
+								<input type="text" name="valor" id="valor" class="form-control" placeholder="R$">
+							</div>
+						</div>
+						<div class="form-group">
+							<div class="col-sm-offset-3 col-sm-6">
+								
+								<span id="btnUpdate" style="display: none;">
+									<span id="spanIdUpdate"></span>
+									<button class="btn btn-success" onclick="updateData();">salvar</button>
+									<button class="btn btn-default" onclick="resetForm();" id="cancelar">cancelar</button>
+								</span>	
+
+								<span id="btnAdd">
+									<button type="button" class="btn btn-primary" id="add" onclick="addData();">adicionar</button>	
+									<button type="button" class="btn btn-default" onclick="limparLista();">resetar</button>
+								</span>
+							</div>	
+						</div>
+					</form>	
+					
+				</div>
+			</div>
+		</div>
+		
+		<nav class="navbar navbar-default navbar-fixed-bottom" id="">
+			<div class="container">
+				<div class="container">
+					<h4 class="text-center">Valor Total: <span id="total">R$ 0, 00</span></h4>
+				</div>
+			</div>		
+		</nav>			
+		
+	</div>
+	
+	<script type="text/javascript" src="js/config.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>	
+	
+</body>
+</html>
